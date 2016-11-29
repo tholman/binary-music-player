@@ -8,3 +8,14 @@
 /*********************************************
  *
  *********************************************/
+
+@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro';
+
+.binary {
+  font-family: 'Source Code Pro', monospace;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+}

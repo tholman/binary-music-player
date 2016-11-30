@@ -75,4 +75,4 @@ function play() {
   Tone.Transport.start();
 }
 
-play();
+// play();

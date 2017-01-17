@@ -42,11 +42,25 @@ html, body {
 }
 
 .editor-container {
+  transition: height 150ms ease-out;
   width: 100%;
   background: #e9e9e9;
   bottom: 0px;
   left: 0px;
-  height: 400px;
+  height: 100px;
+}
+
+.editor-container-contents {
+  transition: opacity 250ms ease-out;
+  opacity: 0;
+}
+
+.editor-container:hover {
+  height: 300px;
+}
+
+.editor-container:hover .editor-container-contents {
+  opacity: 1;
 }
 
 
@@ -99,11 +113,14 @@ ul .white {
   margin-bottom: 50px;
 }
 
-.notes span {
+.notes input {
+  border: none;
+  width: 60px;
+  font-size: inherit;
   border-bottom: 4px solid #222;
   outline: 0px;
 }
 
-.notes span:focus {
+.notes input:focus {
   border-bottom: 4px solid hotpink;
 }

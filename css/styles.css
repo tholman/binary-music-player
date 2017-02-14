@@ -47,7 +47,9 @@ html, body {
   background: #e9e9e9;
   bottom: 0px;
   left: 0px;
-  height: 100px;
+  height: 70px;
+
+  /*height: 300px;*/
 }
 
 .editor-container-contents {
@@ -55,11 +57,11 @@ html, body {
   opacity: 0;
 }
 
-.editor-container:hover {
-  height: 300px;
+.editor-container.open {
+  height: 400px;
 }
 
-.editor-container:hover .editor-container-contents {
+.editor-container.open .editor-container-contents {
   opacity: 1;
 }
 
@@ -84,6 +86,10 @@ li {
   margin: 0;
 }
 
+.piano-key {
+  transition: background 100ms ease;
+}
+
 ul .white {
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #eee;
@@ -93,6 +99,10 @@ ul .white {
   z-index: 1;
 }
 
+.white:hover {
+  background: #eee;
+}
+
 .black {
   margin: 0 -4px 0 -4px;
   border: 1px solid #000;
@@ -100,6 +110,10 @@ ul .white {
   height: 50px;
   width: 8px;
   z-index: 2;
+}
+
+.black:hover {
+  background: #444;
 }
 
 .notes {
@@ -119,8 +133,17 @@ ul .white {
   font-size: inherit;
   border-bottom: 4px solid #222;
   outline: 0px;
+  text-align: center;
 }
 
 .notes input:focus {
   border-bottom: 4px solid hotpink;
+}
+
+.info h1{
+  text-align: center;
+  color: #fff;
+  font-family: helvetica;
+  letter-spacing: 5px;
+  font-size: 30px;
 }

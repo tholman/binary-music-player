@@ -20,7 +20,7 @@ var pad = "0000000000";
 var numberArea = document.querySelector(".binary");
 var previousBinarySet = pad.split('');
 
-var notes = ["D4", "E4", "F4", "G4", "A5", "C5", "D5", "E5", "F5", "G5"];
+var notes = ["D#4", "E#4", "F#4", "G#4", "A3", "C3", "D#1", "E#1", "F#1", "G#1"];
 var times = [1.7, 1.5, 1.3, 1.1, .9, .7, .5, .5, .5, .5];
 
 function toBinary(number){
@@ -32,6 +32,7 @@ function padNumber(numberString) {
 }
 
 function play() {  
+  
   var synth = new Tone.PolySynth(16, Tone.SimpleSynth).set({
     "volume" : -8,
     "oscillator" : {

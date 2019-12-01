@@ -106,9 +106,11 @@
   }
 
   function onCustomizeButtonClicked() {
+    if (!customizeArea.classList.contains("open")) {
+      inputAreas[0].focus();
+      currentFocusedInput = 0;
+    }
     customizeArea.classList.toggle("open");
-    inputAreas[0].focus();
-    currentFocusedInput = 0;
   }
 
   function setNotesInUrl() {

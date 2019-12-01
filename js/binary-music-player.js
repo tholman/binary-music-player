@@ -44,7 +44,7 @@ function playOrPause() {
       }
     }).toMaster();
 
-    Tone.Transport.bpm.value = 60;
+    Tone.Transport.bpm.value = 50;
 
     Tone.Transport.scheduleRepeat(function(time) {
       var number = Math.floor(count);

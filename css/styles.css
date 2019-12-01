@@ -9,17 +9,18 @@
  *
  *********************************************/
 
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro';
+@import "https://fonts.googleapis.com/css?family=Source+Code+Pro";
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   min-height: 100%;
   height: 100%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .containers {
@@ -31,14 +32,14 @@ html, body {
 .binary-container {
   position: relative;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .binary {
   font-size: 50px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .play-pause {
@@ -72,6 +73,14 @@ html, body {
   opacity: 1;
 }
 
+.play {
+  width: 39px;
+  font-size: 15px;
+  height: 35px;
+  border: 3px solid;
+  margin-top: 10px;
+  border-radius: 3px;
+}
 
 /**
  * The Keyboard
@@ -128,25 +137,26 @@ ul .white {
   display: block;
   position: relative;
   text-align: center;
-  font-size: 35px;
+  font-size: 24px;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .notes input {
   border: none;
-  width: 60px;
+  width: 55px;
   font-size: inherit;
   border-bottom: 4px solid #222;
   outline: 0px;
   text-align: center;
+  padding: 5px;
 }
 
 .notes input:focus {
   border-bottom: 4px solid hotpink;
 }
 
-.info h1{
+.info h1 {
   text-align: center;
   color: #222;
   letter-spacing: 2px;
@@ -159,4 +169,12 @@ ul .white {
   margin-left: 10px;
   margin-right: 15px;
   letter-spacing: -2px;
+}
+
+.details {
+  max-width: 700px;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
 }

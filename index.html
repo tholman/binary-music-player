@@ -2,7 +2,7 @@
 <html>
   <head>
 
-    <title> binary-music-player </title>
+    <title> Binary Music Player </title>
     <link href='./css/styles.css' rel='stylesheet'>
 
   </head>
@@ -11,26 +11,28 @@
     <div class="containers">
       <div class="binary-container">
         <div class="binary">0000000000</div>
+        <button class="play">►</button>
       </div>
 
       <div class="editor-container">
 
         <div class="info">
-            <h1>Customize<span>//</span>About<span>//</span>Share</h1>
+            <h1>Customize Notes<span>||</span>Learn About This</h1>
         </div>
 
         <div class="editor-container-contents">
+     
             <div class="notes">
-                <input data-index="0"/>
-                <input data-index="1"/>
-                <input data-index="2"/>
-                <input data-index="3"/>
-                <input data-index="4"/>
-                <input data-index="5"/>
-                <input data-index="6"/>
-                <input data-index="7"/>
-                <input data-index="8"/>
-                <input data-index="9"/>
+                <input readonly data-index="0"/>
+                <input readonly data-index="1"/>
+                <input readonly data-index="2"/>
+                <input readonly data-index="3"/>
+                <input readonly data-index="4"/>
+                <input readonly data-index="5"/>
+                <input readonly data-index="6"/>
+                <input readonly data-index="7"/>
+                <input readonly data-index="8"/>
+                <input readonly data-index="9"/>
             </div>
 
             <div class="piano">
@@ -133,13 +135,17 @@
 
               </ul>
             </div>
+
+            <div class="details">
+                The binary music player is based around <a href="https://www.youtube.com/watch?v=CdaPhpGG6As" target="_blank">this</a> video (which is using real piano sounds, so is a lot more elegant) - and is built with <a href="https://tonejs.github.io/" target="_blank">Tone.JS</a><br><br>
+                Built by <a href="http://tholman.com" target="_blank">Tim Holman</a> - <a href="https://twitter.com/twholman" target="_blank">@twholman</a>
+            </div>
         </div>
       </div>
     </div>
 
-    <script src='js/tone.js'></script>
+    <script src='https://unpkg.com/tone@13.8.25/build/Tone.js'></script>
     <script src='js/binary-music-player.js'></script>
-    <script src='js/ui.js'></script>
 
   </body>
 </html>

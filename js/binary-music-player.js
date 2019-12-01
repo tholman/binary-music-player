@@ -88,8 +88,7 @@
   }
 
   function bindUI() {
-
-    readNotesFromUrl()
+    readNotesFromUrl();
 
     customizeButton.addEventListener("click", onCustomizeButtonClicked, false);
     for (var i = 0; i < keys.length; i++) {
@@ -113,30 +112,34 @@
   }
 
   function setNotesInUrl() {
-    history.replaceState && history.replaceState({}, "", `?keys=${notes.join(',')}`.replace(/\#/g, '^'))
+    history.replaceState &&
+      history.replaceState(
+        {},
+        "",
+        `?keys=${notes.join(",")}`.replace(/\#/g, "^")
+      );
   }
 
   function readNotesFromUrl() {
-    const url = document.location.href
+    const url = document.location.href;
     const urlData = new URL(url);
     const keys = urlData.searchParams.get("keys");
-    
-    if( !keys ) {
-      return
+
+    if (!keys) {
+      return;
     }
 
-    const keyData  = keys.replace(/\^/g, '#').split(',')
+    const keyData = keys.replace(/\^/g, "#").split(",");
 
-    if( keyData.length === 10) {
-
-      for(var i = 0; i < keyData.length; i++ ) {
-        const el = document.querySelector(`[data-piano-key="${keyData[i]}"]`)
-        if( !el ) {
+    if (keyData.length === 10) {
+      for (var i = 0; i < keyData.length; i++) {
+        const el = document.querySelector(`[data-piano-key="${keyData[i]}"]`);
+        if (!el) {
           return;
         }
       }
 
-      notes = keyData
+      notes = keyData;
     }
   }
 
@@ -151,7 +154,7 @@
     }
     inputAreas[currentFocusedInput].focus();
 
-    setNotesInUrl()
+    setNotesInUrl();
   }
 
   cacheDOM();

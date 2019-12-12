@@ -34,7 +34,7 @@
       playing = false;
       pad = "0000000000";
       previousBinarySet = pad.split("");
-      play.innerText = "►";
+      play.classList.toggle('pause');
       return;
     }
 
@@ -75,7 +75,7 @@
     }
 
     playing = true;
-    play.innerText = "■";
+    play.classList.toggle('pause');
     Tone.Transport.start();
   }
 
